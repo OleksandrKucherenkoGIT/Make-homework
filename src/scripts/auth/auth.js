@@ -28,7 +28,7 @@ class ModalAuthRender {
 	                  <h1 class="modalAuth_title">Log In</h1>
 	                  <a href="#" id="notAMember" class="modalAuth_link">Not a member?</a>
 	                  <form id="login_form" class="modalAuth_form">
-	                    <input type="email" name="email" placeholder="Email" class="modalAuth_input" required>
+	                    <input type="email" name="email" placeholder="Email" id="userEmail" class="modalAuth_input" required>
 	                    <input type="password" name="password" placeholder="Password" class="modalAuth_input" title="min length 8 symbols" required>
 	                    <button type="submit" class="modalAuth_btn">Log In</button>
 	                  </form>

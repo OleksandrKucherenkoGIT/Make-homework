@@ -9,7 +9,7 @@ async function SignUpService() {
     });
     console.log(obj);
 
-    let response = await fetch('http://localhost:3000/api/users', {
+    let response = await fetch('https://geekhub-frontend-js-9.herokuapp.com/api/users/', {
     method: 'POST',
     headers: {
     'Content-Type': 'application/json'
@@ -17,7 +17,7 @@ async function SignUpService() {
     body: JSON.stringify(obj)
     })
     .then((response) => {
-        if (response.status === 200){
+        if (response.status === 201){
            alert ("Acount created");
             alert ("You can Log In");
             // window.location.href = './login.html'

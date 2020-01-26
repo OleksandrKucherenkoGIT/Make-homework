@@ -5,6 +5,8 @@ import ResetPasswordService from "./scripts/auth/service/reset_password/reset_pa
 import createOptions from "./scripts/messager_block/conversation/conversation_service.js";
 
 var userKey = localStorage.token;
+ 
+var usermail
 const app = document.getElementById('app')
 components.map(component => app.append(component.render()))
 try{
@@ -19,6 +21,8 @@ try{
     document.getElementById('login_form').addEventListener('submit', (e) => {
         e.preventDefault();
         LoginService();
+        var usermail = document.getElementById("userEmail").value;
+        console.log(usermail)
     })
 }catch(err){}
 
@@ -107,6 +111,8 @@ document.getElementsByClassName("new-conversation__btn")[0].onclick = function()
 document.getElementById("usersList").style.display = "flex"
 } 
 
-document.getElementById("usersList").onclick = function(){
-document.getElementById("usersList").style.display = "none"
-} 
+// document.getElementsByTagName('select')[0].addEventListener("change", function() {
+
+// console.log(document.getElementsByTagName("select")[0].selectedIndex)
+//   document.getElementById("usersList").style.display = "none"
+// });

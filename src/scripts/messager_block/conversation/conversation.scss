@@ -22,10 +22,19 @@
 .conversation{
 	display: none;
 	flex-direction: column;
-	justify-content: center;
+	justify-content: flex-start;
 	align-items: center;
-	width: 100%;
-	color: #fff;
+	background-color: #2196f3;
+	width: 22%;
+	outline: none;
+	border-radius: 5px;
+	border:none;
+	height: 30px;
+	transform: translate(47px, 0);
+	color: #000;
+	position: absolute;
+	
+	
 }
 .new-conversation{
 	display: flex;

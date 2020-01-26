@@ -13,9 +13,10 @@ class InboxComponent {
         let inboxComponent = HTML(`
             <div class="main-message-container__left-aside">
                <div class="conversations">
-                   <div id="usersList" class="conversation">
+                <div id="createThread"></div>
+                   <select id="usersList" class="conversation">
 
-                   </div>
+                   </select>
                    <div class="new-conversation">
                        <button class="new-conversation__btn">
                            <i class="fas fa-plus"></i>
