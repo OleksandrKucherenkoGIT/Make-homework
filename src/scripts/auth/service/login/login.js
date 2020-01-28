@@ -26,11 +26,12 @@ async function LoginService() {
             if (localStorage !== 0){
                 // usermail = document.getElementById("userEmail").value
                 // console.log(document.getElementById("userEmail").value)
+                location.reload()
                 document.getElementsByClassName("authBtns")[0].style.display = "none"
                 document.getElementsByClassName("profile")[0].style.display = "flex"
                 document.getElementsByClassName("BarTopBlock")[0].style.display = "block"
                 document.getElementsByClassName("conversationMain")[0].style.display = "flex"
-           
+
             }
         }
         else{

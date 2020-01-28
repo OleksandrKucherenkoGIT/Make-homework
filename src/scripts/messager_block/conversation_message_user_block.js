@@ -4,23 +4,23 @@ import inboxCmp from "./conversation/conversation.js";
 
 function HTML(html) {
     const div = document.createElement('div')
-    div.className = "joinBlocks"
+    div.className = "joinConMesProf"
     div.innerHTML = html
     return div
 }
 
 class JoinBlocks {
     render() {
-        let joinBlocks = HTML(`    
+        let joinBlocksConMesProf = HTML(`    
         
         `)
         
-        joinBlocks.append(barTop.render())
-        joinBlocks.append(inboxCmp.render())
+        // joinBlocks.append(barTop.render())
+        joinBlocksConMesProf.append(inboxCmp.render())
 
-        return joinBlocks
+        return joinBlocksConMesProf
     }
 }
 
-const join_blocks = new JoinBlocks()
-export default join_blocks
+const join_blocks_CMP = new JoinBlocks()
+export default join_blocks_CMP

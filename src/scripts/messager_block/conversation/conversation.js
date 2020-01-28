@@ -8,7 +8,6 @@ function HTML(html) {
 }
 
 class InboxComponent {
-    constructor() {}
     render() {
         let inboxComponent = HTML(`
             <div class="main-message-container__left-aside">
