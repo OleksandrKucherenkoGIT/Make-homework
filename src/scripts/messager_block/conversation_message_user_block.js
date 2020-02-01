@@ -1,6 +1,7 @@
 import style from "./messager_block.scss"
-import barTop from "./information_bar_top/information_bar_top.js";
+import createMessage from "./messages_display/messages_display.js";
 import inboxCmp from "./conversation/conversation.js";
+import createUserInformation from "./user_information/user_information.js";
 
 function HTML(html) {
     const div = document.createElement('div')
@@ -15,8 +16,9 @@ class JoinBlocks {
         
         `)
         
-        // joinBlocks.append(barTop.render())
         joinBlocksConMesProf.append(inboxCmp.render())
+        joinBlocksConMesProf.append(createMessage.render())
+        joinBlocksConMesProf.append(createUserInformation.render())
 
         return joinBlocksConMesProf
     }
