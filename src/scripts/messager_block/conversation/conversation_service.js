@@ -121,15 +121,18 @@ async function newConversation (){
         document.getElementsByClassName("newConversation")[i].style.backgroundColor = 'transparent'
       }
       document.getElementById(`${this.id}`).style.backgroundColor = '#2f3242'
-      let that_id = this.id
-      updateMessages(that_id)
+      
+      updateMessages(this.id)
       try{
-          document.getElementById("messageForm").addEventListener('submit', (e) => {
+          document.getElementById("sendMsg").onclick =  (e) => {
               e.preventDefault();
-                sendMessage(that_id)
-          })
+                sendMessage(this.id)
+                updateMessages(this.id)
+          }
       }catch(err){}
-
     }
+
+      
+
 });
 }

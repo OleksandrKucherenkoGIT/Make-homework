@@ -14,7 +14,7 @@ export default  async function updateMessages(thread_id) {
         .then((response) => {
         return response.json();
     }).then(messages => {
-    	console.log(messages)
+    	// console.log(messages)
     	let message = document.getElementById("createMessages");
       let addElem = document.createElement('div');
         addElem.id = 'updateMsg'
