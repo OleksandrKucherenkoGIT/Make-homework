@@ -1,5 +1,5 @@
 .conversationMain {
-	display:none;
+	display:flex;
 	flex-grow: 1;
 	height: 68vh;
 	max-width: 30%;
@@ -76,6 +76,7 @@
 	padding-top: 30px;
 	font-size: 22px;
 	font-weight: bold;
+	cursor: pointer;
 }
 
 #createThread{

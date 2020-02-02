@@ -80,17 +80,12 @@ document.getElementsByClassName("close")[0].onclick = function() {
 	document.getElementById("modal-auth").style.display = "none"
 }
 
-
-document.getElementsByClassName("close")[0].onclick = function() {
-	document.getElementById("modal-auth").style.display = "none"
-}
-
 document.getElementsByClassName("profile")[0].onclick = function() {
 	ClearToken()
 	document.getElementsByClassName("authBtns")[0].style.display = "block"
                 document.getElementsByClassName("profile")[0].style.display = "none"
                 document.getElementsByClassName("BarTopBlock")[0].style.display = "none"
-                document.getElementsByClassName("conversationMain")[0].style.display = "none"
+                document.getElementsByClassName("joinBlocks")[0].style.display = "none"
                 
 }
 
@@ -105,7 +100,7 @@ if (userKey !== undefined){
                 document.getElementsByClassName("authBtns")[0].style.display = "none"
                 document.getElementsByClassName("profile")[0].style.display = "flex"
                 document.getElementsByClassName("BarTopBlock")[0].style.display = "block"
-                document.getElementsByClassName("conversationMain")[0].style.display = "flex"
+                document.getElementsByClassName("joinBlocks")[0].style.display = "flex"
                 userInf();
                 
 				console.log(userId)

@@ -2,8 +2,11 @@ import style from "./conversation.scss"
 import  {userInf, userId } from "../../main_service.js";
 import  updateMessages from "../messages_display/messages_service.js";
 import  sendMessage from "../messages_display/messages_send.js";
+import  updateUserInformation from "../user_information/user_service.js";
+
 let usersList;
 let threadId;
+let threadUserId;
 export default  async function createOptions(arg) {
  base()
 	let response = await fetch('https://geekhub-frontend-js-9.herokuapp.com/api/users/all', {
@@ -39,18 +42,18 @@ export default  async function createOptions(arg) {
     }
     document.getElementsByTagName('select')[0].addEventListener("change", function() {
        
-   let userIndex = document.getElementsByTagName("select")[0].selectedIndex
-    document.getElementById("usersList").style.display = "none"
+      let userIndex = document.getElementsByTagName("select")[0].selectedIndex
+      document.getElementById("usersList").style.display = "none"
 
 
-    let el = document.getElementById("newConv")
-    if (el!=null){
-      el.remove()
-    }
+      let el = document.getElementById("newConv")
+      if (el!=null){
+        el.remove()
+      }
     
      
-    newConversation ()
-    base()
+      newConversation ()
+      base()
 
      
 
@@ -104,9 +107,11 @@ async function newConversation (){
 
         usersList = (threads[i].users[1]).name;
         threadId = threads[i]._id
+        threadUserId = threads[i].users[1]._id
+    
      let addElement = document.createElement('div');
      addElement.setAttribute('class', 'newConversation');
-     addElement.setAttribute('id', `${threadId}`);
+     addElement.setAttribute('id', `${threadId+threadUserId}`);
     addElement.innerHTML = ` ${usersList} `;
     
     threadCreate.append(addElement); 
@@ -116,18 +121,19 @@ async function newConversation (){
     ArrayCreatedTreads.forEach(el => el.addEventListener('click', handler))
 
     function handler(){
-      // console.log(this.id)
+      console.log((this.id).slice(0, 24))
       for(i=0; (document.getElementsByClassName("newConversation")[i] !== undefined); i++){
         document.getElementsByClassName("newConversation")[i].style.backgroundColor = 'transparent'
       }
       document.getElementById(`${this.id}`).style.backgroundColor = '#2f3242'
       
-      updateMessages(this.id)
+      updateMessages((this.id).slice(0, 24))
+      updateUserInformation((this.id).slice(24))
       try{
           document.getElementById("sendMsg").onclick =  (e) => {
               e.preventDefault();
-                sendMessage(this.id)
-                updateMessages(this.id)
+                sendMessage((this.id).slice(0, 24))
+                updateMessages((this.id).slice(0, 24))
           }
       }catch(err){}
     }

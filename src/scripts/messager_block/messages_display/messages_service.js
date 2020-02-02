@@ -16,8 +16,8 @@ export default  async function updateMessages(thread_id) {
         return response.json();
     }).then(messages => {
     	if(messages.length >0) {
-    		console.log(messages[0].created_at)
-    	console.log(userId)
+    	// 	console.log(messages[0].created_at)
+    	// console.log(userId)
     	let message = document.getElementById("createMessages");
       	let addElem = document.createElement('div');
         addElem.id = 'updateMsg'
@@ -28,7 +28,6 @@ export default  async function updateMessages(thread_id) {
       			let messagesList = messages[i].body;
      			let addElement = document.createElement('div');
      			addElement.setAttribute('class', 'updateMessages_newList_user');
-     			addElement.setAttribute('id', `${messages[i]._id}`);
      			addElement.innerHTML = ` <div class="updateMessages_newList_user_container">
 											<div class="updateMessages_newList_user_wraper">
 												<div class="updateMessages_newList_user_text">${messagesList}</div>
