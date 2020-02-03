@@ -1,6 +1,11 @@
 *, *::before, *::after {
   box-sizing: border-box;
 }
+::-webkit-scrollbar { 
+    width: 0px;  
+    background: transparent;  
+}
+
 body {
   margin: 0; padding: 0; background-color: #2f3242;
 }

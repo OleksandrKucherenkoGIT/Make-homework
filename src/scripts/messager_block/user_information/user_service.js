@@ -15,7 +15,6 @@ export default  async function updateUserInformation(thread_id) {
         .then((response) => {
         return response.json();
     }).then(users => {
-        console.log(users)
         let userInfoCreate = document.getElementById("userInfo");
                 let addElement = document.createElement('div');
                 addElement.setAttribute('class', 'updateUserInfo_wraper');

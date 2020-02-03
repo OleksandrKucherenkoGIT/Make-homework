@@ -2,7 +2,7 @@ import style from "./conversation.scss"
 
 function HTML(html) {
     const div = document.createElement('div')
-    div.className = "conversationMain"
+    div.className = "conversationBlock"
     div.innerHTML = html
     return div
 }
@@ -10,14 +10,14 @@ function HTML(html) {
 class InboxComponent {
     render() {
         let inboxComponent = HTML(`
-            <div class="main-message-container__left-aside">
-               <div class="conversations">
-                <div id="createThread"></div>
-                   <select id="usersList" class="conversation">
+            <div class="conversationBlock_wraper">
+               <div class="conversationBlock_conversations">
+                <div id="createThread" class="conversationBlock_createThread"></div>
+                   <select id="usersList" class="conversationBlock_select">
 
                    </select>
-                   <div class="new-conversation">
-                       <button class="new-conversation__btn">
+                   <div class="conversationBlock_newConversation">
+                       <button class="conversationBlock_newConversation_btn">
                            <i class="fas fa-plus"></i>
                            New coversation
                        </button>

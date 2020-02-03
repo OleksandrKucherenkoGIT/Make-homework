@@ -106,7 +106,7 @@ if (userKey !== undefined){
 				console.log(userId)
             }
             createOptions();
-document.getElementsByClassName("new-conversation__btn")[0].onclick = function(){
+document.getElementsByClassName("conversationBlock_newConversation_btn")[0].onclick = function(){
 document.getElementById("usersList").style.display = "flex"
 } 
 
