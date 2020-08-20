@@ -19,7 +19,7 @@
     "autoprefixer": "^9.7.3",
     "babel-loader": "^8.0.6",
     "babel-polyfill": "^6.26.0",
-    "bcrypt": "^3.0.7",
+    "bcrypt": "^5.0.0",
     "config": "^3.2.4",
     "copy-webpack-plugin": "^5.1.1",
     "css-loader": "^3.4.0",
